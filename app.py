@@ -17,7 +17,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['SECRET_KEY'] = 'tut4ir@amogelangsibanda/50x%'
 
 weed_model = YOLO('static/weight/weed.pt')
-maize_model = YOLO('static/weight/maize.pt')
+maize_model = YOLO('static/weight/weed.pt')
 animal_model = YOLO('static/weight/weed.pt')
 tomato_model = YOLO('static/weight/tomato.pt')
 
