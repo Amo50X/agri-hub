@@ -8,17 +8,15 @@ from flask_cors import CORS
 from ultralytics import YOLO
 import supervision as sv
 
-UPLOAD_FOLDER = 'static/uploads'
 app = Flask(__name__)
 CORS(app)
 
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER 
 app.config['SECRET_KEY'] = 'tut4ir@amogelangsibanda/50x%'
 
-weed_model = YOLO('static/weight/weed.pt')
-maize_model = YOLO('static/weight/weed.pt')
-animal_model = YOLO('static/weight/animal.pt')
-tomato_model = YOLO('static/weight/tomato.pt')
+weed_model = YOLO('weed.pt')
+maize_model = YOLO('weed.pt')
+animal_model = YOLO('animal.pt')
+tomato_model = YOLO('/tomato.pt')
 
 tracker = sv.ByteTrack()
 box_annotation = sv.BoxAnnotator()
@@ -47,7 +45,7 @@ def VideoProcesing(filepath, filename, model):
     heat_frame = ""
     video_info = sv.VideoInfo.from_video_path(video_path=filepath)
     frame_generator = sv.get_video_frames_generator(filepath)
-    target_path=f"static/predicts/{filename}"
+    target_path=f"copy - {filename}"
     with sv.VideoSink(target_path=target_path,video_info=video_info, codec='h264') as sink:
         for frame in frame_generator:
             results = model.track(frame, conf=0.5)[0]
