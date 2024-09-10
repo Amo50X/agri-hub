@@ -18,7 +18,7 @@ app.config['SECRET_KEY'] = 'tut4ir@amogelangsibanda/50x%'
 
 weed_model = YOLO('static/weight/weed.pt')
 maize_model = YOLO('static/weight/weed.pt')
-animal_model = YOLO('static/weight/weed.pt')
+animal_model = YOLO('static/weight/animal.pt')
 tomato_model = YOLO('static/weight/tomato.pt')
 
 tracker = sv.ByteTrack()
