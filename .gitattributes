@@ -1,3 +1,0 @@
-weed.pt filter=lfs diff=lfs merge=lfs -text
-tomato.pt filter=lfs diff=lfs merge=lfs -text
-maize.pt filter=lfs diff=lfs merge=lfs -text
