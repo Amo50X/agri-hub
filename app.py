@@ -8,7 +8,6 @@ from flask_cors import CORS
 from ultralytics import YOLO
 import supervision as sv
 
-
 UPLOAD_FOLDER = 'static/uploads'
 app = Flask(__name__)
 CORS(app)
@@ -288,6 +287,5 @@ def tomato():
         "message" : "failed",
     })
 
-    
 if __name__ == "__main__":
     app.run(host='0.0.0.0',debug=True)
