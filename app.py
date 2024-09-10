@@ -16,7 +16,7 @@ app.config['SECRET_KEY'] = 'tut4ir@amogelangsibanda/50x%'
 weed_model = YOLO('weed.pt')
 maize_model = YOLO('weed.pt')
 animal_model = YOLO('animal.pt')
-tomato_model = YOLO('/tomato.pt')
+tomato_model = YOLO('tomato.pt')
 
 tracker = sv.ByteTrack()
 box_annotation = sv.BoxAnnotator()
