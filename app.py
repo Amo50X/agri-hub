@@ -91,6 +91,7 @@ def weed():
         return jsonify({'error': 'No selected file'}), 400
     
     if file:
+        print("File Received")
         if "image" in file.content_type:
             in_memory_file = BytesIO()
             file.save(in_memory_file)
